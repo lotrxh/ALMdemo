@@ -31,7 +31,7 @@ jobs:
       with:
         environment-url: 'https://test202009210921.crm5.dynamics.com/'
         user-name: 'wangxuhui@chinasofti.com'
-        password-secret: ${{ secrets.password }}
+        password-secret: ${{ secrets.pwd }}
         solution-file: out/solutions/ALMLab.zip
         force-overwrite: true
         publish-changes: true
@@ -41,7 +41,7 @@ jobs:
       with:
         environment-url: 'https://test202009210921.crm5.dynamics.com/'
         user-name: 'wangxuhui@chinasofti.com'
-        password-secret: ${{ secrets.password }}
+        password-secret: ${{ secrets.pwd }}
         solution-name: ALMLab
         managed: true
         solution-output-file: out/ship/ALMLab.zip
@@ -74,7 +74,7 @@ jobs:
       with:
         environment-url: 'https://orgad780a1c.crm5.dynamics.com/'
         user-name: 'wangxuhui@chinasofti.com'
-        password-secret: ${{ secrets.password }}
+        password-secret: ${{ secrets.pwd }}
         solution-file: out/release/ALMLab.zip
         force-overwrite: true
         publish-changes: true
