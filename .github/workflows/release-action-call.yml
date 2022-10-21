@@ -1,0 +1,21 @@
+name: Release action
+# Call the reusable workflow release-solution-with-inputs.yml
+# Release your solution to prod when you create a new release.
+
+on:
+  release:
+      types: [created]        
+
+jobs:
+  Release-solution-ALMLab:
+    uses: ./.github/workflows/release-solution-with-inputs.yml
+    with:
+      #You can specify the solution name here
+      solution_name: ALMLab
+      #Update your values here
+      BUILD_ENVIRONMENT_URL: 'https://test202009210921.crm5.dynamics.com/'
+      PRODUCTION_ENVIRONMENT_URL: 'https://orgad780a1c.crm5.dynamics.com/'
+      CLIENT_ID: cd8b4856-88e8-4843-90b9-70e6726b14d8
+      TENANT_ID: c3dcdfe3-b2ca-40ea-bd83-1e6b704f5108      
+    secrets:
+      envSecret: ${{ secrets.PowerPlatformSPN }}
