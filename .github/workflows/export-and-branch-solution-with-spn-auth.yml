@@ -25,14 +25,14 @@ jobs:
       with:
         environment-url: 'https://test202009210921.crm5.dynamics.com/'
         user-name: 'wangxuhui@chinasofti.com'
-        password-secret: ${{ secrets.password }}
+        password-secret: ${{ secrets.Pwd }}
 
     - name: export-solution action
       uses: microsoft/powerplatform-actions/export-solution@v0
       with:
         environment-url: 'https://test202009210921.crm5.dynamics.com/'
         user-name: 'wangxuhui@chinasofti.com'
-        password-secret: ${{ secrets.password }}
+        password-secret: ${{ secrets.Pwd }}
         solution-name: ALMLab
         solution-output-file: out/exported/ALMLab.zip
 
