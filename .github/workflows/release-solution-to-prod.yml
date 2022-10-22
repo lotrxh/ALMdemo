@@ -31,7 +31,7 @@ jobs:
       with:
         environment-url: 'https://test202009210921.crm5.dynamics.com/'
         user-name: 'wangxuhui@chinasofti.com'
-        password-secret: ${{ secrets.pwd }}
+        password-secret: ${{ secrets.password }}
         solution-file: out/solutions/ALMLab.zip
         force-overwrite: true
         publish-changes: true
@@ -52,7 +52,7 @@ jobs:
         name: managedSolutions
         path: out/ship/ALMLab.zip
 
-  release-to-staging:
+  release-to-prod:
     needs: [ convert-to-managed ]
     runs-on: windows-latest
     env:
@@ -68,6 +68,8 @@ jobs:
       with:
         name: managedSolutions
         path: out/release/
+
+    - run: get-childitem .\out\release\
 
     - name: Import solution to prod env
       uses: microsoft/powerplatform-actions/import-solution@v0
