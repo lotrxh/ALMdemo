@@ -49,7 +49,7 @@ jobs:
     - name: Upload the ready to ship solution to GH artifact store
       uses: actions/upload-artifact@v2
       with:
-        name: managedSolutions
+        name: ALMLab
         path: out/ship/ALMLab.zip
 
   release-to-staging:
@@ -66,7 +66,7 @@ jobs:
     - name: Fetch the ready to ship solution from GH artifact store
       uses: actions/download-artifact@v2
       with:
-        name: managedSolutions
+        name: ALMLab
         path: out/release/
 
     - name: Import solution to prod env
