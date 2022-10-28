@@ -23,14 +23,14 @@ jobs:
     - name: who-am-i action
       uses: microsoft/powerplatform-actions/who-am-i@v0
       with:
-        environment-url: 'https://test202009210921.crm5.dynamics.com/'
+        environment-url: 'https://org5408a9ae.crm5.dynamics.com/'
         user-name: 'wangxuhui@chinasofti.com'
         password-secret: ${{ secrets.Pwd }}
 
     - name: export-solution action
       uses: microsoft/powerplatform-actions/export-solution@v0
       with:
-        environment-url: 'https://test202009210921.crm5.dynamics.com/'
+        environment-url: 'https://org5408a9ae.crm5.dynamics.com/'
         user-name: 'wangxuhui@chinasofti.com'
         password-secret: ${{ secrets.Pwd }}
         solution-name: ALMLab
